@@ -15,7 +15,7 @@ class SphinxqlServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/config.php' => config_path('sphinxql.php'),
+            __DIR__ . '/../../config/config.php' => config_path('sphinxql.php'),
         ], 'config');
     }
 
