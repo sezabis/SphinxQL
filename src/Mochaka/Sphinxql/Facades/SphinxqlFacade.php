@@ -1,5 +1,5 @@
 <?php
-namespace mnshankar\Sphinxql\Facades;
+namespace Mochaka\Sphinxql\Facades;
 use Illuminate\Support\Facades\Facade;
 
 class SphinxqlFacade extends Facade {

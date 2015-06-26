@@ -1,22 +1,22 @@
 {
-    "name": "mnshankar/sphinxql",
-    "description": "Integrate SphinxQL with Laravel 4. Simplifies Laravel-Sphinx(RT) search",
+    "name": "mochaka/sphinxql",
+    "description": "Integrate SphinxQL with Laravel 5. Simplifies Laravel-Sphinx(RT) search",
     "license":"MIT",
-    "keywords": ["Laravel","Laravel4","SphinxQL", "Sphinx RT", "Search"],
+    "keywords": ["Laravel","Laravel5","SphinxQL", "Sphinx RT", "Search"],
     "authors": [
         {
-            "name": "Shankar Manamalkav",
-            "email": "mnshankar@yahoo.com"
+            "name": "Aaron Florey",
+            "email": "azza@jcaks.net"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "4.*",
+        "illuminate/support": "5.*",
         "foolz/sphinxql-query-builder": "0.9.9"
     },
     "autoload": {
         "psr-0": {
-            "mnshankar\\Sphinxql": "src/"
+            "Mochaka\\Sphinxql": "src/"
         }
     },
     "minimum-stability": "dev"

@@ -1,4 +1,4 @@
-## SphinxQL library for Laravel 4
+## SphinxQL library for Laravel 5.1
 
 This is a simple library that will help you to query a sphinx search server using SphinxQL.  
 My main motivation for putting together this package was to interface easily 
@@ -9,9 +9,9 @@ http://sphinxsearch.com/blog/2010/04/25/sphinxapi-vs-sphinxql-benchmark/
 
 ## Installation
 
-Add `mnshankar/sphinxql` to `composer.json`.
+Add `mochaka/sphinxql` to `composer.json`.
 ```json
-    "mnshankar/sphinxql": "1.0"
+    "mochaka/sphinxql": "1.0"
 ```    
 Run `composer update` to pull down Sphinxql. Note that Sphinxql has a 
 dependency on 'FoolCode/SphinxQL-Query-Builder', which does much of the weight lifting 
@@ -20,20 +20,20 @@ dependency on 'FoolCode/SphinxQL-Query-Builder', which does much of the weight l
 Now open up `app/config/app.php` and add the service provider to your `providers` array.
 ```php
     'providers' => array(
-        'mnshankar\Sphinxql\SphinxqlServiceProvider',
+        'Mochaka\Sphinxql\SphinxqlServiceProvider',
     )
 ```
 and the alias:
 ```php
     'aliases' => array(
-        'SphinxQL'         => 'mnshankar\Sphinxql\Facades\SphinxqlFacade',
+        'SphinxQL'         => 'Mochaka\Sphinxql\Facades\SphinxqlFacade',
     )
 ```
 
 If you need to override the default configuration options (server/port), please use the config publish command
 
 ```php
-php artisan config:publish mnshankar/sphinxql
+php artisan config:publish Mochaka/sphinxql
 ``` 
 
 ## RT (Real-Time) Indexes in Sphinx

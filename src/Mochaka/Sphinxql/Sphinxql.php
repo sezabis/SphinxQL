@@ -1,5 +1,5 @@
 <?php
-namespace mnshankar\Sphinxql;
+namespace Mochaka\Sphinxql;
 class Sphinxql
 {
     protected $library;   
