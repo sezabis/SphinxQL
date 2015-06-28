@@ -1,5 +1,7 @@
 <?php
 namespace Mochaka\Sphinxql;
+use Foolz\SphinxQL\Helper;
+
 class Sphinxql
 {
     protected $library;   
@@ -19,7 +21,7 @@ class Sphinxql
     /**
      * set the hits array
      * @param array $hits - the array returned by executing the SphinxQL 
-     * @return \mnshankar\Sphinxql\Sphinxql
+     * @return \Mochaka\Sphinxql\Sphinxql
      */
     public function with($hits)
     {
@@ -58,5 +60,17 @@ class Sphinxql
     public function raw( $query )
     {
        return $this->library->getConnection()->query($query);
+    }
+
+    public function count()
+    {
+        $meta = Helper::create($this->library->getConnection())->showMeta()->execute();
+        foreach ($meta as $m)
+        {
+            if($m['Variable_name'] == 'total_found')
+            {
+                return $m['Value'];
+            }
+        }
     }
 }
